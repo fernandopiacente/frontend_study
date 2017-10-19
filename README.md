@@ -10,11 +10,11 @@ Para minimizar as chamadas de HTTP seria interessante unir todos os .css em um s
 
 Para rodar localmente são necessários os seguintes scripts:
 
-modernizr.js
-mespond.js
-lightbox.js
-jquery
-prefixfree.js
+modernizr.js <br>
+mespond.js <br>
+lightbox.js <br>
+jquery <br>
+prefixfree.js <br>
 jquery.slides.min.js
 
 ## License
