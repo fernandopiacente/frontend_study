@@ -1,0 +1,47 @@
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+body { background: #EEE; }
+#Main-Container { min-height: 100%; position: relative; }
+#LO_BRSQ { 
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  perspective: 1600px;
+}
+.BRSQ { 
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center; 
+  backface-visibility: visible;
+  transform: rotateX( 0deg );
+  transition: transform 50ms ease;
+  //-webkit-transition-delay: 10ms !important;
+}
+
+#Square { fill:	#D25063; }
+
+/*#Shadow { 
+  -webkit-transform: rotateX( -30deg );
+}
+
+#LO_BRSQ:hover .BRSQ {
+  -webkit-transform: rotateX( 30deg ) rotateY( -90deg );
+}*/
+
+.notransition,
+.notransition #LO_BRSQ,
+.notransition .BRSQ {
+	transition-duration: 0 !important;
+	transition-delay: 0 !important;
+}
+
+.transition-reset,
+.transition-reset #LO_BRSQ,
+.transition-reset .BRSQ {
+	transition-duration: 600ms !important; 
+}
