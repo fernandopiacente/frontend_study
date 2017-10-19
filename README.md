@@ -1,6 +1,5 @@
-# Project Title
+# ESTUDO DE FRONTEND RESPONSIVO
 
-ESTUDO DE FRONTEND RESPONSIVO
 Um breve estudo de desenvolvimento frontend com foco em responsividade, cross browsing e SEO, utilizando HTML5, CSS3 e JS.
 
 ## Getting Started
