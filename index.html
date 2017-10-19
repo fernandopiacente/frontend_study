@@ -1,0 +1,299 @@
+<!--
+
+What you need to do to make this page work:
+
+- Find images for the jQuery Slider and for all the icons (the icons used in the tutorial are from http://www.iconarchive.com/show/icons8-metro-style-icons-by-visualpharm.1.html)
+
+To minimize the amount of HTTP requests combine all CSS files into one single file.
+
+!-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website Responsivo! </title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'>
+        
+        <script src="js/vendor/modernizr.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+        
+        <!-- Boa prática: incluir jquery externo mas com fallback local caso não funcione o externo.-->
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js\/vendor\/1.7.2.jquery.min.js"><\/script>')</script>
+        
+        <script src="lightbox/js/lightbox.js"></script>
+        <script src="js/vendor/prefixfree.min.js"></script>
+        <script src="js/vendor/jquery.slides.min.js"></script>
+        <script src="js/script.js"></script>
+        
+        <!--[if lt IE 9]>
+            <style>
+                header
+                {
+                    margin: 0 auto 20px auto;
+                }
+                #four_columns .img-item figure span.thumb-screen
+                {
+                    display:none;
+                }  
+            </style>
+        <![endif]-->
+        
+        
+        <script>
+        $(function() {
+          $('#slides').slidesjs({	
+            height: 235,
+            navigation: false,
+            pagination: false,
+            effect: {
+              fade: {
+                speed: 400
+              }
+            },
+            callback: {
+                start: function(number)
+                {			
+                    $("#slider_content1,#slider_content2,#slider_content3").fadeOut(500);
+                },
+                complete: function(number)
+                {			
+                    $("#slider_content" + number).delay(500).fadeIn(1000);
+                }		
+            },
+            play: {
+                active: false,
+                auto: true,
+                interval: 6000,
+                pauseOnHover: false,
+                effect: "fade"
+            }
+          });
+        });
+        </script>
+	</head>
+
+	<body>
+        <header>
+            <div class="toggleMobile">
+                <span class="menu1"></span>
+                <span class="menu2"></span> 
+                <span class="menu3"></span>
+            </div>
+            <div id="mobileMenu">
+                <ul>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Porfolio</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                </ul>
+            </div>           
+            <h1>Estudo de Frontend</h1>
+            <p>Responsividade com HTML5, CSS3 e JS</p>           
+            
+            <nav>
+            	<h2 class="hidden">Minha navegação</h2>
+                <ul>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Porfolio</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+        	<h2 class="hidden">Webdesign</h2>
+            <article id="slider_content1">
+                <h3>Responsividade é mandatório!</h3>
+                <p>Atualmente a grande maioria dos acessos à web já são feitos via dispositivos móveis de diferentes tamanhos. 
+                    <br>Adaptação não é opcional. xD</br> <a href="javascript:void(0)" class="responsive_button">Botão responsivo</a></p>
+                <a class="button" href="javascript:void(0)">Botão responsivo</a>
+            </article>
+            <article id="slider_content2">
+                <h3>Cross Browsing</h3>
+                <p> Um código que funcione ao menos nos principais navegadores também é obrigatório. <a href="javascript:void(0)" class="responsive_button">Mehr lesen...</a></p>
+                <a class="button" href="javascript:void(0)">Funfa até no IE!</a>
+            </article>
+            <article id="slider_content3">
+                <h3>SEO ou morte!</h3>
+                <p>Toda estruturação do site deve ser feita levando em conta as estratégias de otimização dos motores de busca. <a href="javascript:void(0)" class="responsive_button">Mehr lesen...</a></p>
+                <a class="button" href="javascript:void(0)">Hello google bot!</a>
+            </article>
+            <div id="slides">
+                <img src="img/slide3.jpg" alt="Some alt text">
+                <img src="img/slide2.jpg" alt="Some alt text">    	
+                <img src="img/slide1.jpg" alt="Some alt text">
+            </div>
+        </section>
+        <section id="spacer">  
+        	<h2 class="hidden">Call to action</h2>          
+            <p>Entre em contato para desenvolvermos projetos incríveis!</p>
+            <div class="search">
+                <form action="#">
+                    <input type="text" name="sitesearch" value="Insira seu e-mail..."/>
+                    <input type="submit" name="start_search" class="button" value="Registrar"/>
+                </form>
+            </div>            
+        </section>
+        <section id="boxcontent">
+        	<h2 class="hidden">Adipiscing</h2>
+            <article>            	               
+                <img src="img/icon1.png" alt="Some alt text"/>                
+                <h3>Artigo 1</h3>
+                <p>        	
+                    Esse espaço pode ser usado para um artigo. 
+                </p>
+            </article>
+            <article>            	     
+                <img src="img/icon2.png" alt="Some alt text"/>              
+                <h3>Informações</h3>
+                <p>        	
+                    Espaço para mais informações ou outro artigo.
+                </p>
+            </article>
+            <article>            	    
+                <img src="img/icon3.png" alt="Some alt text"/>                
+                <h3>Mais texto</h3>
+                <p>        	
+                    Bla bla bla bla bla.
+                </p>
+            </article>
+            <br class="clear"/>
+        </section>
+        
+        <section id="four_columns">
+            <h2>
+                Ofertas especiais
+            </h2>    
+            <article class="img-item">
+            	<h3 class="hidden">Dolor sit amet</h3>
+                <figure>  
+                    <a href="img/img1.jpg" rel="lightbox" title="Mês do dentista!">
+                        <span class="thumb-screen"></span>
+                        <img src="img/img1_thumb.jpg" alt="Some alt text"/>
+                    </a>
+                    <figcaption>
+                        <strong>
+                            Mês do Dentista!
+                        </strong>
+                        Mega ofertas em uso contínuo.
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="img-item">
+            	<h3 class="hidden">Sit Amet</h3>
+                <figure>
+                    <a href="img/img2.jpg" rel="lightbox" title="Ofertas especiais de natal!">
+                        <span class="thumb-screen"></span>
+                        <img src="img/img2_thumb.jpg" alt="Some alt text"/>
+                    </a>
+                    <figcaption>
+                        <strong>
+                            Especial de Natal!
+                        </strong>
+                        Novidades: cartões de natal animados!
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="img-item">
+            	<h3 class="hidden">Dolor Sit</h3>
+                <figure>
+                    <a href="img/img3.jpg" rel="lightbox" title="Cartões de natal!">
+                        <span class="thumb-screen"></span>
+                        <img src="img/img3_thumb.jpg" alt="Some alt text"/>
+                    </a>
+                    <figcaption>
+                        <strong>
+                           Com versão digital!
+                        </strong>
+                        Os mais lindos cartões de natal de toda odontologia!
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="img-item">
+            	<h3 class="hidden">Lorem Ipsum</h3>
+                <figure>
+                    <a href="img/img4.jpg" rel="lightbox" title="Brindes!">
+                        <span class="thumb-screen"></span>
+                        <img src="img/img4_thumb.jpg" alt="Some alt text"/>
+                    </a>
+                    <figcaption>
+                        <strong>
+                            Brindes Dental!
+                        </strong>
+                        Lindos assim só na Dental Speed!
+                    </figcaption>
+                </figure>
+            </article>
+            <br class="clear"/>
+        </section>
+        
+        <section id="text_columns">
+        	<h2 class="hidden">Blindtext</h2>
+            <article class="column1">    
+                <h3>Motion com CSS3</h3>
+                    <p>Ao lado há dois exemplos de animação interativa em HTML5 e CSS3.</p>
+                    <p>Passe o mouse por cima dos ícones para ativá-las.</p>
+                    <p>Além de leve, é possível alterar rapidamente o movimento. :)</p>
+            </article>
+            <section class="column2">
+            	<h3 class="hidden">Lorem Impsum</h3>
+                <article class="row">  
+                	<h4 class="hidden">Dolor sit</h4>                  
+                    <img src="img/icon4.png" width="80" class="rocket" alt="Some alt text"/>
+                    <p>Para o alto e avante!</p>
+                </article> 
+                <article class="row">
+                	<h4 class="hidden">Ipsum</h4>                
+                    <img src="img/icon5.png" width="80" class="clock" alt="Some alt text"/>
+                    <br>
+                    <p>Não tome muito café!</p>
+                </article>   
+            </section>
+        </section>
+        <footer>
+        	<h2 class="hidden">Our footer</h2>
+            <section id="copyright">
+            	<h3 class="hidden">Copyright notice</h3>
+                <div class="wrapper">
+                    <div class="social">
+                        <a href="javascript:void(0)"><img src="img/icon6.png" alt="Some alt text" width="25"/></a>
+                        <a href="javascript:void(0)"><img src="img/icon7.png" alt="Some alt text" width="25"/></a>
+                        <a href="javascript:void(0)"><img src="img/icon8.png" alt="Some alt text" width="25"/></a>
+                        <a href="javascript:void(0)"><img src="img/icon9.png" alt="Some alt text" width="25"/></a>
+                        <a href="javascript:void(0)"><img src="img/icon10.png" alt="Some alt text" width="25"/></a>
+                    </div>
+                    &copy; Copyright 2017 by <a href="http://behance.net/fpiacente">Fernando</a>. All Rights Reserved.
+                </div>
+            </section>
+            <section class="wrapper">
+            	<h3 class="hidden">Footer content</h3>
+                <article class="column">
+                    <h4>Rodapé</h4>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+                </article>
+                <article class="column midlist">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="http://www.behance.net/fpiacente">Portfólio behance</a></li>
+                        <li><a href="javascript:void(0)">E-mail</a></li>
+                        <li><a href="javascript:void(0)">Github</a></li>
+                        <li><a href="javascript:void(0)">Linkedin</a></li>
+                    </ul>
+                </article>
+                <article class="column rightlist">
+                    <h4>Link para as páginas principais</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)"><img src="img/slide1_thumb.jpg" width="80" alt="Some alt text"/><span>Esse link pode ser usado para voltar para a seção 1. </span></a></li>
+                        <li><a href="javascript:void(0)"><img src="img/slide2_thumb.jpg" width="80" alt="Some alt text"/><span>Esse link pode ser usado para voltar para a seção 2.</span></a></li>
+                        <li><a href="javascript:void(0)"><img src="img/slide3_thumb.jpg" width="80" alt="Some alt text"/><span>Esse link pode ser usado para voltar para a seção 3.</span></a></li>
+                    </ul>
+                    <br class="clear"/>
+                </article>
+            </section>
+        </footer>
+	</body>
+</html>
