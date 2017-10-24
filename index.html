@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
         <script src="js/vendor/prefixfree.min.js"></script>
         <script src="js/vendor/jquery.slides.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
         
         <!--[if lt IE 9]>
             <style>
@@ -121,11 +122,11 @@
         </section>
         <section id="spacer">  
         	<h2 class="hidden">Call to action</h2>          
-            <p>Entre em contato para desenvolvermos projetos incríveis!</p>
+            <p>Um pouco de AngularJS -></p>
             <div class="search">
                 <form action="#">
-                    <input type="text" name="sitesearch" value="Insira seu e-mail..."/>
-                    <input type="submit" name="start_search" class="button" value="Registrar"/>
+                    <input type="text" name="sitesearch" value="Digite alguma coisa..." ng-model="variavel"/>
+                    <input type="submit" name="start_search" class="button" value="Você digitou {{variavel}}"/>
                 </form>
             </div>            
         </section>
