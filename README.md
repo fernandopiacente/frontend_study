@@ -1,4 +1,4 @@
-# ESTUDO DE FRONTEND RESPONSIVO
+# RESPONSIVE FRONTEND STUDY
 
 A brief study of frontend development focusing on responsiveness, cross browsing and SEO, using HTML5, CSS3 and JS.
 
