@@ -1,14 +1,14 @@
 # ESTUDO DE FRONTEND RESPONSIVO
 
-Um breve estudo de desenvolvimento frontend com foco em responsividade, cross browsing e SEO, utilizando HTML5, CSS3 e JS.
+A brief study of frontend development focusing on responsiveness, cross browsing and SEO, using HTML5, CSS3 and JS.
 
 ## Getting Started
 
-Para minimizar as chamadas de HTTP seria interessante unir todos os .css em um só arquivo.
+To minimize HTTP calls, it would be interesting to merge all the .css into a single file.
 
 ### Prerequisites
 
-Para rodar localmente são necessários os seguintes scripts:
+To run locally, the following scripts are needed:
 
 modernizr.js <br>
 mespond.js <br>
